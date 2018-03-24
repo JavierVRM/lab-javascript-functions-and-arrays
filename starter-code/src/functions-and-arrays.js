@@ -36,7 +36,7 @@ function sumArray (numbers) {
   for (var i = 0; i < numbers.length; i++) {
     total += numbers[i];
   }
-  return total - 63; // -63 porque al ejecutarlo en chrome me añade 63 a la suma de cualquier array dado.
+  return total ; // -63 porque al ejecutarlo en chrome me añade 63 a la suma de cualquier array dado.
 };
 
 // Calculate the Average
@@ -46,7 +46,7 @@ function averageNumbers (numbersAvg) {
   for (var i = 0; i < numbersAvg.length; i++) {
     totalAvg += numbersAvg[i]; 
   }
-  totalAvg = totalAvg / (numbersAvg.length + 1);
+  totalAvg = totalAvg / (numbersAvg.length);
   return totalAvg;
 };
 
@@ -63,14 +63,15 @@ var wordsArr = [
   'fuel',
   'palace'
 ];
-var counter = 0;
+
 function averageWordLength (wordsArr) {
+  var counter = 0;
   for (var i = 0; i < wordsArr.length; i++) {
     for (var j = 0; j < wordsArr[i].length; j++) {
       counter++;
     }
   }
-  counter = counter / (wordsArr.length + 1);
+  counter = counter / (wordsArr.length);
   return counter;
 }
 
@@ -136,6 +137,17 @@ var wordsCount = [
   'disobedience',
   'matter'
 ];
+
+function howManyTimes (wordsCount, target) {
+	var howMany = 0;
+  for (var i = 0; i < wordsCount.length; i++) {
+    if (wordsCount[i].includes(target)) {
+      howMany++;
+    }
+  }
+  return howMany;
+  howMany = 0;
+};
 // Bonus Quest
 
 var matrix = [
